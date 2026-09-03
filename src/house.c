@@ -26,7 +26,7 @@
  *   - Nothing in this file prints anything. Printing is render.c's job.
  *
  * Smart Home Console · Day 03 midterm — G9
- * Student: <YOUR NAME HERE>
+ * Student: <salma ahmed abdelfattah>
  */
 #include "house.h"
 
