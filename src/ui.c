@@ -198,7 +198,7 @@ void setTemperature(void)
     int adc_val = 0;
 
     printf("  Raw ADC reading (0..1023): ");
-    if (!readInt(&adc_val) || adc_val < 0 || adc_val > ADC_MAX) {
+    if (!readInt(&adc_val) || adc_val < 0 || adc_val > (int)ADC_MAX) {
         statusSet(C_ALARM, "Invalid ADC value. Must be 0..1023.");
         return;
     }
@@ -332,7 +332,7 @@ void houseReport(void)
     drawBar(alarms, ROOM_COUNT, REPORT_BAR_W, C_ALARM);
     printf("\n\n");
 
-    Room_t *rooms = houseRooms();
+    const Room_t *rooms = houseRooms();
     uint8_t hottest_idx = 0;
     uint8_t coldest_idx = 0;
 
